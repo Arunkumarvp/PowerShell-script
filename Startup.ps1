@@ -3,6 +3,7 @@
 $currentDirectory = Get-Location
 Start-Process "code" -ArgumentList $currentDirectory
 
+
 # Wait a few seconds to let VS Code launch
 Start-Sleep -Seconds 2
 
@@ -15,6 +16,7 @@ if ($ie) {
 } else {
     # If IE is not open, try with default browser using Chrome-style command
     Start-Process "chrome" -ArgumentList "--restore-last-session"
+    Start-Process "msedge.exe" -ArgumentList "--restore-last-session"
 }
 
 
